@@ -1,0 +1,76 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+<!-- Css -->
+{% block css %}
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner"
+    style="background-image:url({% static 'images/training.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>Training</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+
+{% if messages %}
+<div class="alert alert-success" role="alert">
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div id="fh5co-blog" class="fh5co-bg-section">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Trainings / Programmes</h2>
+
+            </div>
+        </div>
+
+        {% if trainings %}
+        <div class="row">
+            {% for training in trainings %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="container training-card">
+                    <div class="panel panel-default training-panel-custom">
+                        <div class="panel-heading">
+                            <img src="{{training.image.url}}" class="img-responsive training-image" height="220px">
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="training-title">{{training.title}}</h3>
+                            <span class="training-desc">
+                                <p>By {{training.tutor}} </p>
+                            </span>
+                            <span class="training-date">
+                                <p>Start Date: {{training.date}} </p>
+                            </span>
+                            <center><a href="{% url 'training-detail' training.id %}" class="btn btn-primary">Register
+                                    Now</a></center>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+<!-- Css -->
+{% block css %}
+{% endblock %}
+
+
+<!-- Content -->
+{% block content %}
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/System%20solutions.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>System Solutions</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="fh5co-trainer">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-12 text-center fh5co-heading">
+
+
+                <div class="services consult-services">
+                    <h2></h2>
+                    <p>
+                        We offer solutions that address business, institution, government and individual problems. Our
+                        job is to avail our highly esteemed clients with a total end-to-end solution from hardware to
+                        software covering data and voice networks.
+
+                        We also run a data communication center meant to service the day-to-day demands of our esteemed
+                        clients. DreamWorks Data Centers offers the expertise a proactive and technologically inclined
+                        company needs to perform its operations efficiently and effectively, through allowing it to
+                        concentrate on its core activities whilst deploying the latest communication implements.
+
+                        Its wide range of solutions will be provided to the business community and public in the areas
+                        of multimedia, call center facility, data communication and knowledge management consulting. Our
+                        team of professionals are experts with extensive experience in designing, implementing and
+                        advising clients on ICT challenges which includes; ISP setup, satellite networking and direct
+                        satellite “Broadband” internet (VSAT), fiber optics installation, wireless networking
+                        (microwaves), structured cabling system development and implementation, remote access solutions,
+                        routing and switching, network administration and management, access control solutions, system
+                        specification, integration, engineering, voice over internet protocol (VoIP), intranet and
+                        extranet solutions, WAN and LAN, network security and monitoring, VPN, high-end server
+                        implementation, data storage protection and recovery solutions, and website design and hosting.
+
+                        Contact us
+
+                        We are simply waiting to serve you</p>
+
+                    <a href="{% url 'contact' %}" class="btn btn-primary consult-btn">Contact Us</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

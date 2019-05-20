@@ -1,0 +1,58 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load instagram_client %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/gallery.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>Gallery</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Gallery Section -->
+
+<div id="fh5co-gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                <h2> Our Gallery</h2>
+               
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row row-bottom-padded-md">
+            <div class="col-md-12">
+                <ul id="fh5co-portfolio-list">
+                    {% instagram_user_recent_media dreamworksl %}
+                    {% for media in recent_media %}
+                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ media.thumbnail_src }}); ">
+                        <a href="#">
+                           
+                        </a>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>		
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!-- css -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/training-detail.css' %}">
+{% endblock %}
+
+<!-- content -->
+{% block content %}
+
+<div id="fh5co-trainer detail-style">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 text-center fh5co-heading">
+
+
+                <div class="training-detail">
+                    <h2>{{ training_detail.title }}</h2>
+                    <h4>
+                        {{ training_detail.subtitle }}</h4>
+                    <p>Tutor: {{ training_detail.tutor }}</p>
+                    <br>
+                    <ul>
+                        <li>Duration: {{ training_detail.duration }}</li>
+                        <li>Start Date: {{training_detail.date}}</li>
+
+                    </ul>
+                    <p class="price">Price: &#8358;{{training_detail.price}}</p>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-4 text-center fh5co-heading">
+                <div class="training-detail-image">
+                    <img src="{{training_detail.image.url}}" width="400px" height="250px" class="img-responsive">
+                </div>
+
+            </div>
+        </div>
+        <div class="row animate-box">
+            <div class="col-md-12 text-center fh5co-heading">
+
+
+                <div class="training-detail-desc">
+                    <h2>Description</h2>
+                    <p>
+                        {{training_detail.desc}}
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-push-1 animate-box fadeInUp animated-fast ">
+
+    </div>
+    <div class="col-md-7 animate-box fadeInUp animated-fast form-style">
+        <h3>For Enquiries:</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row form-group">
+                <div class="col-md-10">
+                    {{ registration_form|crispy }}
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+
+        </form>
+        
+    </div>
+</div>
+
+
+
+{%  endblock %}

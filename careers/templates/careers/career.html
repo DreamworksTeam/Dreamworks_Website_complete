@@ -1,0 +1,64 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!-- title -->
+{% block title %}
+Careers
+{% endblock %}
+
+<!-- content -->
+{% block content %}
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/career.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>Career</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="fh5co-contact">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-12 animate-box">
+                <h3>Fill out the Application form and Upload your CV</h3>
+                <form enctype="multipart/form-data" action="{% url 'career' %}" method="POST">
+                    {% csrf_token %}
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            {{ career_form|crispy }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn btn-primary">
+                    </div>
+
+                </form>
+                {% if messages %}
+                <div class="alert alert-success" role="alert">
+                    {% for message in messages %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+<!-- Css -->
+{% block css %}
+{% endblock %}
+
+
+<!-- Content -->
+{% block content %}
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/digital%20signal.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>Digital Media Publishing</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="fh5co-trainer">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-12 text-center fh5co-heading">
+
+
+                <div class="services consult-services">
+                    <h2>Our Digital Media & Publishing Unit</h2>
+                    <p>
+                        Our publishing unit is characterized by decades of experience in Desktop publishing, graphics
+                        design and conventional printing and publishing.
+
+                        Our responsibilities are enormous. They include conventional printing of magazines, calendars,
+                        posters, memos, diaries, seminar booklets, training materials and kits, books and other
+                        materials. Thus, we will open discussion, recommend, implement and provide excellent services to
+                        our highly esteemed customer as requested and offer professional advices.
+
+                        We have some products in this unit. We publish two magazines namely “Pinnacle” and “Digital
+                        Society.” The former will soon become a monthly magazine and it is meant to reach the world with
+                        meaningful and insightful events that will mould the lives of our readers and add value to them.
+                        Especially in areas of leadership, business, technology, entertainment etc. while the latter is
+                        a annual resource meant to reach the world with latest information on ICT in our annual
+                        convention. Other products include some of the books written by our staff and published by us;
+                        they include moral, leadership, business and computer books. One of such is “Diamond in the
+                        sand”, a 21st Century leadership tool, which is one of the resources we use in our Career,
+                        Leadership and Entrepreneurial Project (CLEP Africa) for young people and young minded
+                        individuals aspiring to become great leaders, entrepreneurs and attain the peak of their career.
+
+                        We are simply waiting to serve you</p>
+
+                    <a href="{% url 'contact' %}" class="btn btn-primary consult-btn">Contact Us</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

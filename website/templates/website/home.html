@@ -1,0 +1,210 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block css %}
+<!-- css file -->
+{% endblock %}
+
+
+
+{% block content %}
+
+<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url({% static 'images/background.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12  text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box " data-animate-effect="fadeIn">
+                        <h1 class="home-header">World class and industry standard IT services & Training</h1>
+                        <div class="buttons">
+                            <a href="{% url 'training' %}" class="btn btn-primary custom-button red-btn">Register for a course</a>
+                            
+
+
+                            
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="fh5co-services" class="fh5co-bg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center animate-box">
+                <div class="services ">
+                    <span><img class="img-responsive" src="#" alt=""></span>
+                    <h3>SYSTEM SOLUTIONS</h3>
+                    <p class="desc">We offer solutions that address business, institution, government and individual problems.</p>
+                    <p><a href="{% url 'system-solution' %}" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center animate-box">
+                <div class="services ">
+                    <span><img class="img-responsive" src="#" alt=""></span>
+                    <h3>DIGITAL MEDIA &amp; PUBLISHING</h3>
+                    <p class="desc">Our publishing unit is characterized by decades of experience in Desktop publishing, printing and graphics design .</p>
+                    <p><a href="{% url 'media-publishing' %}" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center animate-box">
+                <div class="services">
+                    <span><img class="img-responsive" src="#" alt=""></span>
+                    <h3>CONSULTING</h3>
+                    <p class="desc">Our consulting unit covers trainings, conferences, seminars, workshops in areas like information, communication, knowledge management, business development and ICT applications in government, medicine, public service</p>
+                    <p><a href="{% url 'consulting' %}" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div id="fh5co-testimonial" class="fh5co-bg-section">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Some of our Proud Clients</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row animate-box">
+                    <div class="owl-carousel owl-carousel-fullwidth">
+                        <div class="row client-row">
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/OXFm.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/USAID.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/unido.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/CDC.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/unwomen.png' %}">
+                </div>
+            </div>
+                        <div class="row client-row">
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/vso.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%206.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%207.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2010.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2011.png' %}">
+                </div>
+            </div>
+                        <div class="row client-row">
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2012.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2013.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2015.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2017.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2018.png' %}">
+                </div>
+            </div>
+                        <div class="row client-row">
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2019.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2020.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2021.png' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2044.jpg' %}">
+                </div>
+                <div class="col-md-2 client-col">
+                    <img src="{% static 'images/photoshop%2055.png' %}">
+                </div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="fh5co-testimonial" class="fh5co-bg-section">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Testimonials</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row animate-box">
+                    <div class="owl-carousel owl-carousel-fullwidth">
+                        <div class="item">
+                            <div class="testimony-slide active text-center">
+                                <figure>
+                                    <img src="{% static 'images/prof_issac.jpg' %}" alt="user">
+                                </figure>
+                                <span>Prof. Isaac Adewole (Min of Health)</span>
+                                <blockquote>
+                                    <p>Sincerely I am completely overtaken by knowledge and energy that has been put into this work by DreamWorks. This is a share demonstration of the Nigerian Spirit and I am very impressed. I look forward to doing more work with your team.&rdquo;</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-slide active text-center">
+                                <figure>
+                                    <img src="{% static 'images/Patrick-kormawa.png' %}" alt="user">
+                                </figure>
+                                <span>Dr. Patrick Kormawa (UNIDO Country Rep.)</a></span>
+                                <blockquote>
+                                    <p>&ldquo;DreamWorks is one IT business I have so much respect for, your creativity and resourcefulness over time evolving and your concentration on value addition is noteworthy. Please sustain the tempo . . . . .&rdquo;</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-slide active text-center">
+                                <figure>
+                                    <img src="{% static 'images/profile.jpg' %}" alt="user">
+                                </figure>
+                                <span>Dr. Duke (USAID HMS Dir.)</span>
+                                <blockquote>
+                                    <p>&ldquo;I don’t know how you do what you do, but to say that you guys are good is an understatement, I see you guys flying soon and hitting the sky so hard . . . . . . . &rdquo;</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
