@@ -59,6 +59,20 @@
 <script src="js/respond.min.js"></scrpt>
 <![endif]-->
 
+<style>
+    @media(min-width: 980px){
+        .main-logo{
+            width: 50% ;
+        }
+    }
+
+    @media(max-width: 980px){
+        .main-logo{
+            width: 100% ;
+        }
+    }
+</style>
+
 </head>
 
 <body>
@@ -84,8 +98,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-2">
-                            <div id="fh5co-logo"><img src="{% static 'images/dwlogo.jpg' %}" width="200px"
-                                    height="60px"> </div>
+                            <div id="fh5co-logo"  style="height: 60px"><img src="{% static 'images/dwlogo.png' %}" class="main-logo"> </div>
                         </div>
                         <div class="col-xs-10 text-right menu-1">
                             <ul>

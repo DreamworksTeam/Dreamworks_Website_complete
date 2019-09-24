@@ -1,77 +1,81 @@
-{% extends 'website/base.html' %}
-{% load static %}
-{% load crispy_forms_tags %}
+{% extends 'website/base.html' %} {% load static %} {% load crispy_forms_tags %}
 
 <!-- css -->
-{% block css %}
-{% endblock %}
-
+{% block css %} {% endblock %}
 
 <!-- content -->
 {% block content %}
-<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/contact-us-1.jpg' %});" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <div class="display-t">
-                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                        <h1>Contact Us</h1>
-                    </div>
-                </div>
-            </div>
+
+<header
+  id="fh5co-header"
+  class="fh5co-cover fh5co-cover-sm"
+  role="banner"
+  style="background-image:url({% static 'images/contact-us-1.jpg' %});"
+  data-stellar-background-ratio="0.5"
+>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <div class="display-t">
+          <div class="display-tc animate-box" data-animate-effect="fadeIn">
+            <h1>Contact Us</h1>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
-
-
 <div id="fh5co-contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 col-md-push-1 animate-box">
-
-                <div class="fh5co-contact-info">
-                    <h3>Contact Information</h3>
-                    <ul>
-                        <li class="address">Sky Memorial Complex Block D, <br> Flat 2 one 5, Wuse, Abuja - FCT</li>
-                        <li class="phone"><a href="tel://+234 90 3966 4334">+234 90 3966 4334</a></li>
-                        <li class="phone"><a href="tel://+234 90 9630 6099">+234 90 9630 6099</a></li>
-                        <li class="email"><a href="mailto:talk2dreamworks@yahoo.com">talk2dreamworks@yahoo.com</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="col-md-6 animate-box">
-                <h3>Get In Touch</h3>
-                <form method="POST">
-                    {% csrf_token %}
-
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            {{ contact_form|crispy }}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary">
-                    </div>
-
-                </form>
-                {% if messages %}
-                <div class="alert alert-success" role="alert">
-                    {% for message in messages %}
-                    <p>{{ message }}</p>
-                    {% endfor %}
-                </div>
-                {% endif %}
-
-
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-push-1 animate-box">
+        <div class="fh5co-contact-info">
+          <h3>Contact Information</h3>
+          <ul>
+            <li class="address">
+              Sky Memorial Complex Block D, <br />
+              Flat 2 one 5, Wuse, Abuja - FCT
+            </li>
+            <li class="phone">
+              <a href="tel://+234 90 3966 4334">+234 90 3966 4334</a>
+            </li>
+            <li class="phone">
+              <a href="tel://+234 90 9630 6099">+234 90 9630 6099</a>
+            </li>
+            <li class="email">
+              <a href="mailto:talk2dreamworks@yahoo.com"
+                >talk2dreamworks@yahoo.com</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="col-md-6 animate-box">
+        <h3>Get In Touch</h3>
+        <form method="POST">
+          {% csrf_token %}
 
+          <div class="row form-group">
+            <div class="col-md-12">
+              {{ contact_form | crispy }}
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Send Message" class="btn btn-primary" />
+          </div>
+        </form>
+        {% if messages %}
+        <div class="alert alert-success" role="alert">
+          {% for message in messages %}
+          <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
-
 
 {% endblock %}
