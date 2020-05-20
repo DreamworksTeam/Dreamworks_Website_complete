@@ -7,7 +7,7 @@ django-instagram==0.3.0
 django-m2m-history==0.3.6
 django-phone-field==1.7.0
 django-social-api==0.1.1
-httplib2==0.12.1
+httplib2==0.18.0
 idna==2.8
 lxml==4.3.3
 Pillow==6.0.0
